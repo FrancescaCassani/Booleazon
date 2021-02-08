@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1 class="pt-3 pb-3 text-center">Insert new beer</h1>
-        
+
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -63,15 +63,5 @@
 
         </form>
 
-
-
-
-
-
-       
-    
-        
 </div>
-
-
 @endsection

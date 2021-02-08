@@ -46,14 +46,12 @@ class BeerController extends Controller
 
         // Aggiunta nuova chiave associativa slug
         $data['slug']= Str::slug($data['title'], '-');
-        
+
 
         // Validazione
         $request->validate($this->ruleValidation());
-        
 
-        
-    
+
         // Se img presente viene salvata nello storage
         if(!empty($data['path_img'])){
             $data['path_img'] = Storage::disk('public')->put('images' , $data['path_img']);
@@ -65,16 +63,14 @@ class BeerController extends Controller
 
         // Variabile di controllo salvataggio
         $saved = $newBeer->save();
-        
+
         // Redirect se il salvataggio va a buon fine
         if($saved){
             return redirect()->route('beers.index');
         } else{
             // Choose new route
             return redirect()->route('homepage');
-        } 
-      
-
+        }
     }
 
     /**
@@ -84,10 +80,10 @@ class BeerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
-    {   
+    {
         // Navigazione con slug(url friendly)
         $beer = Beer::where('slug', $slug)->first();
-        
+
         return view('beers.show', compact('beer'));
 
     }
@@ -120,6 +116,8 @@ class BeerController extends Controller
     {
         // dati inviati dalla form
         $data = $request->all();
+
+
         // validazione
         $request->validate($this->ruleValidation());
         $beer = Beer::find($id);

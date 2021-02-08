@@ -6,7 +6,8 @@
 
 
     <h1 class="pt-4">La nostra storia</h1>
-    <p class="text-center pb-3">Che confusione
+    <p class="text-center pb-3">
+        Che confusione
         <br>
         Sarà perché beviamo
         <br>
@@ -21,7 +22,7 @@
         Se ci sto bene
         <br>
         Sarà perché beviamo</p>
-    <img class="img-fluid" src="img/Ricchi-e-Poveri.jpg" alt="">
+    <img class="img-fluid" src="img/Ricchi-e-Poveri.jpg">
     <p class="pt-3 text-right">Vi aspettiamo! I Ricchi & Poveri &#9829;</p>
   </div>
 

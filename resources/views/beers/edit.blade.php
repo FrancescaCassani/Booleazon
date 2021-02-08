@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1>Edit: {{$beer->title}}</h1>
-        
+
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -18,7 +18,7 @@
     @endif
 
 
-
+        {{-- Rotta per il comando update --}}
         <form action="{{ route('beers.update', $beer->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
@@ -47,6 +47,7 @@
                 <label for="type">Type</label>
                 <input class="form-control" type="text" name="type" id="type" value="{{ old('type', $beer->type) }}">
             </div>
+
             <div class="form-group">
                 <label for="path_img">Beer image</label>
                 @isset($beer->path_img)
@@ -59,12 +60,12 @@
             </div>
 
             <div class="form-group">
-                <input class="btn btn-dark" type="submit" value="Update">
+                <input class="btn btn-dark" type="submit" value="Update beer">
             </div>
 
         </form>
-    
-        
+
+
 </div>
 
 
